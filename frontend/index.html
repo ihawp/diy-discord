@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <main>
+            <header>
+
+            </header>
+            <section>
+                <h2>Register</h2>
+                <form action="http://localhost:3000/auth/register" method="POST">
+                    <label for="username">
+                        Username:
+                        <input type="text" name="username" id="username" placeholder="Username" minlength="5" maxlength="16" required>
+                    </label>
+                    <label for="email">
+                        Email:
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </label>
+                    <label for="password">
+                        Password:
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                    </label>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+            <section>
+                <h2>Login</h2>
+                <form action="http://localhost:3000/auth/login" method="POST">
+                    <label for="username">
+                        Username:
+                        <input type="text" name="username" id="username" placeholder="Username" minlength="5" maxlength="16" required>
+                    </label>
+                    <label for="password">
+                        Password:
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                    </label>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+        <script src="main.js" type="module"></script>
+    </body>
+</html>
