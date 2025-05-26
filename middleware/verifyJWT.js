@@ -1,11 +1,21 @@
 const jwt = require('jsonwebtoken');
+const { asyncVerifyJWT } = require('../utils/asyncJWT');
 
 const verifyJWT = async (req, res, next) => {
 
-    const { jwt } = await req.signedCookies;
-    console.log(jwt);
+    const authToken = req.signedCookies['jwt'] || '';
 
-    console.log('req signed cookies: ', req.signedCookies);
+    if (!authToken) {
+        return res.status(403).json({ data: null, error: 'No authentication token present.' });
+    }
+
+    try {
+        const verifyToken = await asyncVerifyJWT(authToken);
+
+        console.log(verifyToken);
+    } catch (error) {
+        return res.status(400).json({ data: null, error: '' });
+    }
 
     next();
 
