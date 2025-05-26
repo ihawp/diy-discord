@@ -1,6 +1,8 @@
 const logoutController = (req, res) => {
 
-    // res.clearCookie('jwt', { path: '/' });
+    console.log(req.user);
+
+    res.clearCookie('jwt', { path: '/' });
 
     res.status(200).json({ data: { loggedOut: true }, error: null });
 

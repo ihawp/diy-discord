@@ -10,28 +10,17 @@ app.use(cookieParser('ihawp.com'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-/*
-
-    Auth Route
-
-    Purpose: Authentication
-
-    Sub-Routes: /register, /login
-
-*/
-
+/**
+ * @route USE /auth
+ * @description Authentication route (login, register, magic...). Sub-routes are used to alter user-sesion status.
+ * @router authRouter
+ */
 app.use('/auth', authRouter);
 
-/*
-
-    Serve the Front-End application
-
-*/
-
+// Serve Front-End
 app.use(express.static(path.join(__dirname, 'frontend')));
 app.get(/.*/, (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 
-// Export to: ./server.js
 module.exports = app;
