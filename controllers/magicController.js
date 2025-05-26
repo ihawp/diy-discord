@@ -29,7 +29,7 @@ const magicController = async (req, res) => {
         return res.status(500).json({ data: null, error: 'Failed to retrieve authentication token from the database.' });
     }
 
-    const compareToken = bcrypt.compare(key, authToken.token);
+    const compareToken = await bcrypt.compare(key, authToken.token);
 
     if (!compareToken) {
         return res.status(400).json({ data: null, error: 'Failure.' });
