@@ -1,3 +1,11 @@
+
+/**
+ * Set options for cookies set on this server
+ * 
+ * @example
+ * res.cookie('name', data, cookieOptions);
+ */
+
 const cookieOptions = {
     httpOnly: true,
     secure: false,
