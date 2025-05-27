@@ -3,8 +3,8 @@ const jwt = require('jsonwebtoken');
 const validator = require('validator');
 
 const { selectAuthById, updateUserAuthById } = require('../utils/usePool');
-const jwtOptions = require('../utils/jwtOptions');
-const cookieOptions = require('../utils/cookieOptions');
+const { jwtOptions1h, jwtOptions1w } = require('../utils/jwtOptions');
+const { cookieOptions1h, cookieOptions1w } = require('../utils/cookieOptions');
 
 const magicController = async (req, res) => {
 
@@ -41,9 +41,13 @@ const magicController = async (req, res) => {
         return res.status(500).json({ data: null, error: 'Failure updating authentication token. Please try clicking the link again.' });
     }
 
-    const createJWT = jwt.sign({ id }, process.env.JWT_SECRET, jwtOptions);
+    // Create JWT tokens
+    //
+    const createJWT = jwt.sign({ id }, process.env.JWT_SECRET, jwtOptions1h);
+    const createLongLastingJWT = jwt.sign({ id }, process.env.LONG_JWT_SECRET, jwtOptions1w);
 
-    res.cookie('jwt', createJWT, cookieOptions);
+    res.cookie('jwt', createJWT, cookieOptions1h);
+    res.cookie('long-jwt', createLongLastingJWT, cookieOptions1w);
 
     res.status(200).json({ data: { authenticated: true }, error: null });
 

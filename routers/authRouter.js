@@ -6,6 +6,7 @@ const loginController = require('../controllers/loginController');
 const magicController = require('../controllers/magicController');
 const logoutController = require('../controllers/logoutController');
 const verifyController = require('../controllers/verifyController');
+const deleteController = require('../controllers/deleteController');
 
 // Middleware
 const verifyJWT = require('../middleware/verifyJWT');
@@ -64,6 +65,17 @@ authRouter.get('/logout',
 authRouter.post('/verify', 
     verifyJWT, 
     verifyController
+);
+
+/** 
+ * @route POST delete
+ * @description User can delete their own account.
+ * @middleware verifyJWT
+ * @controller deleteController
+ */
+authRouter.post('/delete', 
+    verifyJWT, 
+    deleteController
 );
 
 module.exports = authRouter;
