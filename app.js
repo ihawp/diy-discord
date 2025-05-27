@@ -6,6 +6,7 @@ const logger = require('./utils/logger');
 
 // Routers
 const authRouter = require('./routers/authRouter');
+const teamsRouter = require('./routers/teamsRouter');
 
 const app = express();
 
@@ -19,6 +20,14 @@ app.use(express.json());
  * @router authRouter
  */
 app.use('/auth', authRouter);
+
+
+/**
+ * @route USE /teams
+ * @description Teams related route, mainly used for database operations of `teams` table
+ * @router teamsRouter
+ */
+app.use('/teams', teamsRouter);
 
 // Serve Front-End
 app.use(express.static(path.join(__dirname, 'frontend')));

@@ -1,0 +1,36 @@
+const cron = require('node-cron');
+
+/*
+Cheat Sheet:
+
+const cron = require('node-cron');
+
+cron.schedule('* * * * *', () => {
+  console.log('running a task every minute');
+});
+
+Allowed fields
+ # ┌────────────── second (optional)
+ # │ ┌──────────── minute
+ # │ │ ┌────────── hour
+ # │ │ │ ┌──────── day of month
+ # │ │ │ │ ┌────── month
+ # │ │ │ │ │ ┌──── day of week
+ # │ │ │ │ │ │
+ # │ │ │ │ │ │
+ # * * * * * *
+Allowed values
+field	value
+second	0-59
+minute	0-59
+hour	0-23
+day of month	1-31
+month	1-12 (or names)
+day of week	0-7 (or names, 0 or 7 are sunday)
+
+*/
+
+const doSomething = () => 10;
+
+// Do something
+cron.schedule('* * 1 * *', doSomething);

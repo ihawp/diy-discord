@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
 
+        <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
         <header>
@@ -47,8 +49,33 @@
                 </form>
             </section>
             <section>
+                <h2>Delete Account:</h2>
                 <form action="http://localhost:3000/auth/delete" method="POST">
                     <input type="submit" value="Delete Account">
+                </form>
+            </section>
+            <section>
+                <h2>Logout:</h2>
+                <form action="http://localhost:3000/auth/logout" method="POST">
+                    <input type="submit" value="Logout">
+                </form>
+            </section>
+            <section>
+                <h2>Create Team</h2>
+                <form action="http://localhost:3000/teams/create" method="POST">
+                    <label for="name">
+                        Team Name:
+                        <input type="text" name="name" id="name" placeholder="Team Name" maxLength="255" required>
+                    </label>
+                    <label for="description">
+                        Description:
+                        <input type="text" name="description" id="description" placeholder="Team Description" maxlength="255" required>
+                    </label>
+                    <label for="private">
+                        Private:
+                        <input type="checkbox" name="private[]" id="private" placeholder="Private Team">
+                    </label>
+                    <input type="submit" value="Create Team">
                 </form>
             </section>
         </main>

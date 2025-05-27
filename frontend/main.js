@@ -14,7 +14,31 @@ async function getUserAuthStatus() {
     return data;
 }
 
+async function getTeams() {
+
+    const response = await fetch('http://localhost:3000/teams/getTeams', {
+        credentials: 'same-origin',
+    });
+
+    if (!response.ok) {
+        return false;
+    }
+
+    const { data, error } = await response.json();
+
+    if (error) {
+        return false;
+    }
+
+    return data;
+
+}
+
 const { verified, user } = await getUserAuthStatus();
+
+const teams = await getTeams();
+
+console.log(teams);
 
 console.log(verified, user);
 

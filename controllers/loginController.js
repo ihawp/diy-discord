@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
+const logger = require('../utils/logger');
 
 const { selectUserByUsername, updateUserAuthById } = require('../utils/accountsQueries');
 const { generateMagicTokenEmailTemplate } = require('../utils/emailTemplates');
@@ -69,6 +70,12 @@ const loginController = async (req, res) => {
     }
 
     res.status(200).json({ data: { loggedIn: true }, error: null });
+
+    logger.info({
+        loggedIn: true,
+        id: realUserInfo.id,
+
+    });
 
 }
 
