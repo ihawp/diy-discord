@@ -29,9 +29,9 @@ app.use('/auth', authRouter);
 app.use('/teams', teamsRouter);
 
 // Serve Front-End
-app.use(express.static(path.join(__dirname, 'frontend')));
+app.use(express.static(path.join(__dirname, 'dev-frontend')));
 app.get(/.*/, (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, 'dev-frontend', 'index.html'));
 });
 
 module.exports = app;
