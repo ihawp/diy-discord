@@ -17,9 +17,9 @@ const jwt = require('jsonwebtoken');
  *   console.error('Invalid token:', err);
  * }
  */
-const asyncVerifyJWT = async (authToken) => {
+const asyncVerifyJWT = async (authToken, secret) => {
   return new Promise((resolve, reject) => {
-    jwt.verify(authToken, process.env.JWT_SECRET, (err, payload) => {
+    jwt.verify(authToken, secret, (err, payload) => {
       if (err) reject(err);
       else resolve(payload);
     });

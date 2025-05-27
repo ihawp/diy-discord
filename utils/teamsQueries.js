@@ -9,11 +9,16 @@ const pool = require('./pool');
 /**
  * Get a row from the `teams` table by it's `id`
  * 
- * @param {number} id - User ID
+ * @param {number} userId
  * @returns {Object<Promise>} - Query Result
  */
-const selectTeamById = async (id) => {
-    const [response] = await pool.execute('SELECT * FROM teams WHERE id = ?', [id]);
+const selectUserTeamsById = async (userId) => {
+    const [response] = await pool.execute('SELECT * FROM teams WHERE owner_id = ?', [userId]);
+    return response;
+}
+
+const selectJoinedUserTeamsById = async (userId) => {
+    const [response] = await pool.execute('SELECT teams.* FROM teams JOIN team_members tm ON tm.team_id = teams.id WHERE tm.user_id = ? OR teams.owner_id = ?', [userId, userId]);
     return response;
 }
 
@@ -52,7 +57,8 @@ const deleteTeamById = async (id) => {
 
 module.exports = {
 
-    selectTeamById,
+    selectUserTeamsById,
+    selectJoinedUserTeamsById,
 
     updateTeamNameById,
 

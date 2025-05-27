@@ -1,12 +1,12 @@
 const express = require('express');
 const verifyJWT = require('../middleware/verifyJWT');
 
-
 const teamsRouter = express.Router();
 
 // Controllers
 const teamsCreateController = require('../controllers/teamsCreateController');
-const getTeamsController = require('../controllers/getTeamsController');
+const selectUserTeamsController = require('../controllers/selectUserTeamsController');
+const selectJoinedUserTeamsController = require('../controllers/selectJoinedUserTeamsController');
 
 /**
  * @route POST /create
@@ -14,6 +14,16 @@ const getTeamsController = require('../controllers/getTeamsController');
  */
 teamsRouter.post('/create', verifyJWT, teamsCreateController);
 
-teamsRouter.get('/getTeams', verifyJWT, getTeamsController);
+/**
+ * @route GET /selectUserTeams
+ * @description Get teams where id (user id) is owner_id
+ */
+teamsRouter.get('/selectUserTeams', verifyJWT, selectUserTeamsController);
+
+/**
+ * @route GET /selectJoinedUserTeams
+ * @description Get teams where id (user id) is a member or owner of the team
+ */
+teamsRouter.get('/selectJoinedUserTeams', verifyJWT, selectJoinedUserTeamsController);
 
 module.exports = teamsRouter;
