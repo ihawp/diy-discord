@@ -57,12 +57,12 @@ authRouter.get('/logout',
 );
 
 /**
- * @route POST verify
+ * @route GET verify
  * @description Front-End link for verifying cookie JWT for content output upon inital load.
  * @middleware verifyJWT
  * @controller verifyController
  */
-authRouter.post('/verify', 
+authRouter.get('/verify', 
     verifyJWT, 
     verifyController
 );

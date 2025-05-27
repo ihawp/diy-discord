@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const validator = require('validator');
 
-const { selectAuthById, updateUserAuthById } = require('../utils/usePool');
+const { selectAuthById, updateUserAuthById } = require('../utils/accountsQueries');
 const { jwtOptions1h, jwtOptions1w } = require('../utils/jwtOptions');
 const { cookieOptions1h, cookieOptions1w } = require('../utils/cookieOptions');
 

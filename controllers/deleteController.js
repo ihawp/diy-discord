@@ -1,5 +1,12 @@
-const { deleteUserById } = require('../utils/usePool');
+const { deleteUserById } = require('../utils/accountsQueries');
 
+/**
+ * Delete a user account user the req.user.id from verifyJWT
+ * 
+ * @param {Request} req
+ * @param {Response} res
+ * @return {json}
+ */
 const deleteController = async (req, res) => {
 
     try {

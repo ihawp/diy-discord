@@ -1,7 +1,7 @@
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
-const { insertUserAndAuth, selectUserByUsernameOrEmail } = require('../utils/usePool');
+const { insertUserAndAuth, selectUserByUsernameOrEmail } = require('../utils/accountsQueries');
 
 const { generateMagicTokenEmailTemplate } = require('../utils/emailTemplates');
 const { sendEmailTemplate } = require('../utils/sendEmail');

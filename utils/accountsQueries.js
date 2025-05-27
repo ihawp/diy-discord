@@ -18,6 +18,17 @@ const selectUserById = async (id) => {
 }
 
 /**
+ * Select a user profile row for the frontend display
+ * 
+ * @param {number} id 
+ * @returns {Promise<Object|null>} User object OR null
+ */
+const selectFrontendUserById = async (id) => {
+    const [response] = await pool.execute('SELECT username, email, email_verified, pfp_url, account_created FROM accounts WHERE id = ?', [id]);
+    return response;
+}
+
+/**
  * Select a user profile row by their username
  * 
  * @param {string} username 
@@ -144,6 +155,7 @@ const deleteUserById = async (id) => {
 
 module.exports = {
     selectUserById,
+    selectFrontendUserById,
     selectUserByUsername,
     selectUserByEmail,
     selectUserByUsernameOrEmail,

@@ -23,6 +23,7 @@ app.use('/auth', authRouter);
 // Serve Front-End
 app.use(express.static(path.join(__dirname, 'frontend')));
 app.get(/.*/, (req, res) => {
+    logger.info(`User Connected: ${req.ip}`);
     res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });
 

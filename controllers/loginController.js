@@ -2,10 +2,19 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 
-const { selectUserByUsername, updateUserAuthById } = require('../utils/usePool');
+const { selectUserByUsername, updateUserAuthById } = require('../utils/accountsQueries');
 const { generateMagicTokenEmailTemplate } = require('../utils/emailTemplates');
 const { sendEmailTemplate } = require('../utils/sendEmail');
 
+/**
+ * Verify a users credentials entered 
+ * during login before sending a `magic` 
+ * verification link to the users email
+ * 
+ * @param {Request} req
+ * @param {Response} res
+ * @return {json}
+ */
 const loginController = async (req, res) => {
 
     const { username, password } = req.body;
