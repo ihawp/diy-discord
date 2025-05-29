@@ -42,7 +42,6 @@ const magicController = async (req, res) => {
     }
 
     // Create JWT tokens
-    //
     const createJWT = jwt.sign({ id }, process.env.JWT_SECRET, jwtOptions1h);
     const createLongLastingJWT = jwt.sign({ id }, process.env.LONG_JWT_SECRET, jwtOptions1w);
 

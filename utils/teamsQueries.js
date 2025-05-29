@@ -19,6 +19,7 @@ const selectUserTeamsById = async (userId) => {
 
 const selectJoinedUserTeamsById = async (userId) => {
     const [response] = await pool.execute('SELECT teams.* FROM teams JOIN team_members tm ON tm.team_id = teams.id WHERE tm.user_id = ? OR teams.owner_id = ?', [userId, userId]);
+    console.log(response);
     return response;
 }
 
@@ -44,6 +45,11 @@ const insertTeam = async (name, description, owner_id, private) => {
     return response;
 }
 
+const insertTeamMember = async (teamId, id) => {
+    const [response] = await pool.execute('INSERT INTO team_members (team_id, user_id) VALUES (?, ?)', [teamId, id]);
+    return response;
+}
+
 // ##########################################################
 // ##########################################################
 // ##########################################################
@@ -63,6 +69,7 @@ module.exports = {
     updateTeamNameById,
 
     insertTeam,
+    insertTeamMember,
 
     deleteTeamById,
 

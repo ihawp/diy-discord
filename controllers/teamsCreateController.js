@@ -1,4 +1,4 @@
-const { insertTeam } = require('../utils/teamsQueries');
+const { insertTeam, insertTeamMember } = require('../utils/teamsQueries');
 const validator = require('validator');
 
 /**
@@ -27,12 +27,18 @@ const teamsCreateController = async (req, res) => {
     }
 
     try {
-        await insertTeam(name, description, id, getPrivate);
+        const response = await insertTeam(name, description, id, getPrivate);
+
+        if (response) {
+            const { insertId } = response;
+
+            await insertTeamMember(insertId, id);
+
+            res.status(200).json({ data: { teamCreated: true, teamExtra: response }, error: null });
+        }
     } catch (error) {
         return res.status(500).json({ data: { teamCreated: false }, error: 'There was a database error and the team could not be inserted.' });
     }
-
-    res.status(200).json({ data: { teamCreated: true }, error: null });
 
 }
 

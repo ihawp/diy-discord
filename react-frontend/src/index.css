@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+button, input[type="submit"] {
+    cursor: pointer;
+}

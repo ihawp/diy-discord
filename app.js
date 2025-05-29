@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const cors = require('cors');
 
 // Routers
 const authRouter = require('./routers/authRouter');
@@ -12,6 +13,11 @@ const app = express();
 app.use(cookieParser('ihawp.com'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(cors({
+    origin: ['http://localhost:5173'],
+    methods: ['GET', 'POST'],
+    credentials: true,
+}));
 
 /**
  * @route USE /auth
@@ -29,9 +35,9 @@ app.use('/auth', authRouter);
 app.use('/teams', teamsRouter);
 
 // Serve Front-End
-app.use(express.static(path.join(__dirname, 'dev-frontend')));
+app.use(express.static(path.join(__dirname, 'react-frontend', 'dist')));
 app.get(/.*/, (req, res) => {
-    res.sendFile(path.join(__dirname, 'dev-frontend', 'index.html'));
+    res.sendFile(path.join(__dirname, 'react-frontend', 'dist', 'index.html'));
 });
 
 module.exports = app;
