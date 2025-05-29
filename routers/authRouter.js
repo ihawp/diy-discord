@@ -67,15 +67,4 @@ authRouter.get('/verify',
     verifyController
 );
 
-/** 
- * @route POST delete
- * @description User can delete their own account.
- * @middleware verifyJWT
- * @controller deleteController
- */
-authRouter.post('/delete', 
-    verifyJWT, 
-    deleteController
-);
-
 module.exports = authRouter;

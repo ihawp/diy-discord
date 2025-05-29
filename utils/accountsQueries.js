@@ -103,6 +103,11 @@ const updateUserAuthById = async (newAuthToken, id) => {
     return response;
 }
 
+const updateUserPasswordById = async (newPasswordHash, id) => {
+    const [response] = await pool.execute('UPDATE accounts SET password = ? WHERE id = ?', [newPasswordHash, id]);
+    return response;
+}
+
 // ##########################################################
 // ##########################################################
 // ##########################################################
