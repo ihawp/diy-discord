@@ -20,10 +20,12 @@ const UpdateEmailForm = () => {
 
         if (!response) return false;
 
+        console.log(response);
 
         // logic will change if I am going to send a magic link, response will be true
         // and then it will say to check email.
         if (response.emailUpdated) {
+            console.log(response.newEmail);
             setAccount(prev => ({ ...prev, email: response.newEmail }));
         }
 

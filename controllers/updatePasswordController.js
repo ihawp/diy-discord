@@ -1,5 +1,6 @@
 const { updateUserPasswordById } = require('../utils/accountsQueries');
 const { createLoggerInfo, infoTemplate } = require('../utils/logger');
+const bcrypt = require('bcryptjs');
 
 const updatePasswordController = async (req, res) => {
 
@@ -14,7 +15,8 @@ const updatePasswordController = async (req, res) => {
     }
 
     try {
-        await updateUserPasswordById(password, id);
+        const hashedPassword = await bcrypt.hash(password, 10);
+        await updateUserPasswordById(hashedPassword, id);
     } catch (error) {
         return res.status(500).json({ data: { passwordUpdated: false }, error: 'There was a problem when trying to update your password. Please try again later.' });
     }

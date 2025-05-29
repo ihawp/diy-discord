@@ -35,12 +35,14 @@ const magicController = async (req, res) => {
         return res.status(400).json({ data: null, error: 'Failure.' });
     }
 
+    // Remove the old authentication token (1 time use)
     try {
         await updateUserAuthById('', id);
     } catch (error) {
         return res.status(500).json({ data: null, error: 'Failure updating authentication token. Please try clicking the link again.' });
     }
 
+    // Update the users email_verified status to 1 (verified)
     try {
         await updateUserEmailVerifiedById(1, id);
     } catch (error) {

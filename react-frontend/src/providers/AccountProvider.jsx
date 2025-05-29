@@ -7,7 +7,13 @@ export const AccountContext = createContext(null);
 export default function AccountProvider({ children }) {
 
     const [verified, setVerified] = useState(false);
-    const [account, setAccount] = useState(false);
+    const [account, setAccount] = useState({
+        account_created: "",
+        email: "",
+        email_verified: 0,
+        pfp_url: "default-user.webp",
+        username: "",
+    });
 
     const handleLogout = async () => {
 
@@ -28,6 +34,7 @@ export default function AccountProvider({ children }) {
             if (!response) return;
 
             setVerified(response.verified);
+            console.log(response.user);
             setAccount(response.user);
             
         }
