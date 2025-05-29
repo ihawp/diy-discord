@@ -395,3 +395,106 @@
 {"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:38:02.938Z"},"success":false}}
 {"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:38:02.943Z"},"success":false}}
 {"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:38:02.945Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:04.439Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:04.442Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:04.448Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:04.450Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:04.457Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:04.458Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:04.461Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:04.462Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:38.945Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:38.948Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:38.955Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:38.957Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:38.961Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:38.962Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:38.967Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:38.968Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:42.499Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:42.501Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:42.506Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:42.508Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:42.513Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:42.515Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Short JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:42.520Z"},"success":false}}
+{"level":"error","message":{"data":{"action":"Long JWT Failed","id":"unknown","timestamp":"2025-05-29T05:55:42.523Z"},"success":false}}
+{"level":"info","message":{"id":11,"loggedIn":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T05:56:15.447Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T05:56:15.474Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:08:48.325Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:08:48.337Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:08:51.101Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:08:51.112Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:08:57.797Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:08:57.803Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:09:09.108Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:09:09.113Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:15:04.922Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:15:04.935Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:15:32.061Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:15:32.080Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:15:40.535Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:15:40.541Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:16:10.263Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:16:10.269Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:17.065Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:17.070Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:23.766Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:23.774Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:24.907Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:24.915Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:28.676Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:28.687Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:31.237Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:18:31.242Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:19:23.679Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:19:23.684Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:20:13.503Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:20:13.517Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:20:15.224Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:20:15.232Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:22:16.677Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:22:16.710Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:23:15.477Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:23:15.487Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:23:22.432Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:23:22.446Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:23:27.760Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:23:27.768Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:23:39.220Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:23:39.258Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:24:41.583Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:24:41.588Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:24:46.266Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:24:46.273Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:25:13.889Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:25:13.897Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:25:38.638Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:25:38.661Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:26:03.688Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:26:03.703Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:26:08.606Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:26:08.615Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:26:56.685Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:26:56.697Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:26:58.693Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:26:58.702Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:27:51.316Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:27:51.325Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:28:07.412Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:28:07.435Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:29:12.894Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:29:12.902Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:30:05.940Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:30:05.952Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:30:40.947Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:30:40.957Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:30:50.607Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:30:50.617Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:31:37.600Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:31:37.609Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:31:46.743Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:31:46.755Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:32:19.074Z","verified":true},"success":true}}
+{"level":"info","message":{"data":{"action":"User verified","id":"11","timestamp":"2025-05-29T06:32:19.085Z","verified":true},"success":true}}

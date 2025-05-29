@@ -1,9 +1,9 @@
 const jwtOptions1h = {
-    expiresIn: '1m'
+    expiresIn: '1h'
 }
 
 const jwtOptions1w ={
-    expiresIn: '2m'
+    expiresIn: '1w'
 }
 
 module.exports = {

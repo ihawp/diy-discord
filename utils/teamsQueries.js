@@ -19,7 +19,6 @@ const selectUserTeamsById = async (userId) => {
 
 const selectJoinedUserTeamsById = async (userId) => {
     const [response] = await pool.execute('SELECT teams.* FROM teams JOIN team_members tm ON tm.team_id = teams.id WHERE tm.user_id = ? OR teams.owner_id = ?', [userId, userId]);
-    console.log(response);
     return response;
 }
 
@@ -56,8 +55,8 @@ const insertTeamMember = async (teamId, id) => {
 // Delete Statements:
 // -----------------
 
-const deleteTeamById = async (id) => {
-    const [response] = await pool.execute('DELETE FROM teams WHERE id = ?', [id]);
+const deleteTeamById = async (id, ownerId) => {
+    const [response] = await pool.execute('DELETE FROM teams WHERE id = ? AND owner_id = ?', [id, ownerId]);
     return response;
 }
 

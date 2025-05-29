@@ -1,11 +1,25 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect } from 'react';
 
 import { TeamsContext } from '../providers/TeamsProvider';
 import CreateTeamForm from '../components/CreateTeamForm';
 
+import io from 'socket.io-client';
+
+const socket = io('http://localhost:3000');
+
 export default function Home() {
     
     const { ownedTeams } = useContext(TeamsContext);
+
+    useEffect(() => {
+        socket.on('wow', (data) => {
+        console.log('Received wow event:', data);
+        });
+
+        return () => {
+        socket.off('wow');
+        };
+    }, []);
     
     return <main>
 

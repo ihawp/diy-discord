@@ -7,6 +7,7 @@ const teamsRouter = express.Router();
 const teamsCreateController = require('../controllers/teamsCreateController');
 const selectUserTeamsController = require('../controllers/selectUserTeamsController');
 const selectJoinedUserTeamsController = require('../controllers/selectJoinedUserTeamsController');
+const deleteTeamController = require('../controllers/deleteTeamController');
 
 /**
  * @route POST /create
@@ -25,5 +26,7 @@ teamsRouter.get('/selectUserTeams', verifyJWT, selectUserTeamsController);
  * @description Get teams where id (user id) is a member or owner of the team
  */
 teamsRouter.get('/selectJoinedUserTeams', verifyJWT, selectJoinedUserTeamsController);
+
+teamsRouter.get('/delete', deleteTeamController);
 
 module.exports = teamsRouter;
