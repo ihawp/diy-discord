@@ -8,7 +8,7 @@ const updatePasswordController = require('../controllers/updatePasswordControlle
 // Middleware
 const verifyJWT = require('../middleware/verifyJWT');
 
-const accountRouter = express.Router();
+const accountsRouter = express.Router();
 
 /** 
  * @route POST delete
@@ -16,7 +16,7 @@ const accountRouter = express.Router();
  * @middleware verifyJWT
  * @controller deleteController
  */
-authRouter.post('/delete', 
+accountsRouter.post('/delete', 
     verifyJWT, 
     deleteController
 );
@@ -27,7 +27,7 @@ authRouter.post('/delete',
  * @middleware verifyJWT
  * @controller updateUsernameController
  */
-authRouter.post('update-username', 
+accountsRouter.post('/update-username', 
     verifyJWT, 
     updateUsernameController
 );
@@ -38,9 +38,18 @@ authRouter.post('update-username',
  * @middleware verifyJWT
  * @controller updatePasswordController
  */
-authRouter.post('update-password', 
+accountsRouter.post('/update-password', 
     verifyJWT,
     updatePasswordController
-)
+);
 
-module.exports = accountRouter;
+/**
+ * ...
+ * 
+ * @route
+ * @description
+ * @middleware
+ * @controller
+ */
+
+module.exports = accountsRouter;

@@ -36,7 +36,7 @@ export default function AccountProvider({ children }) {
 
     }, []);
 
-    return <AccountContext.Provider value={{ verified, account }}>
+    return <AccountContext.Provider value={{ verified, setVerified, account, setAccount }}>
         { children }
     </AccountContext.Provider>
 

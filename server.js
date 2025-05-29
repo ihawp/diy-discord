@@ -27,6 +27,7 @@ app.use(cors({
 // Routers
 const authRouter = require('./routers/authRouter');
 const teamsRouter = require('./routers/teamsRouter');
+const accountsRouter = require('./routers/accountsRouter');
 
 /**
  * @route USE /auth
@@ -43,13 +44,17 @@ app.use('/auth', authRouter);
  */
 app.use('/teams', teamsRouter);
 
+
+/**
+ * @route USE /accounts
+ * @description Allow users to retrieve and update their own account information
+ * @router accountsRouter
+ */
+app.use('/accounts', accountsRouter);
+
 // socket.io
 
 io.on('connection', (socket) => {
-    console.log('a user connected');
-
-    socket.emit('wow', { data: 'some data' });
-
     socket.on('message', (data) => {
         console.log(data);
     });

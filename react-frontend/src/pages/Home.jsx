@@ -1,7 +1,9 @@
 import { useContext, useEffect } from 'react';
 
 import { TeamsContext } from '../providers/TeamsProvider';
+
 import CreateTeamForm from '../components/CreateTeamForm';
+import UpdateUsernameForm from '../components/UpdateUsernameForm';
 
 import io from 'socket.io-client';
 
@@ -43,6 +45,8 @@ export default function Home() {
         </section>
 
         <CreateTeamForm />
+
+        <UpdateUsernameForm />
 
     </main>
 }

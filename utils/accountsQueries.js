@@ -39,6 +39,11 @@ const selectUserByUsername = async (username) => {
     return response;
 }
 
+const selectUserIdByUsername = async (username) => {
+    const [response] = await pool.execute('SELECT id FROM accounts WHERE username = ?', [username]);
+    return response;
+}
+
 /**
  * Select a user profile row by their email
  * 
@@ -162,12 +167,14 @@ module.exports = {
     selectUserById,
     selectFrontendUserById,
     selectUserByUsername,
+    selectUserIdByUsername,
     selectUserByEmail,
     selectUserByUsernameOrEmail,
     selectAuthById,
 
     updateUserUsernameById,
     updateUserAuthById,
+    updateUserPasswordById,
 
     insertUser,
     insertUserAndAuth,
