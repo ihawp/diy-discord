@@ -12,7 +12,10 @@ const generateMagicTokenEmailTemplate = (userEmail, id, magicToken) => {
         to: userEmail,
         subject: 'Magic Login Link',
         text: 'Here is your magic link!',
-        html: `<p>Here is your <a href="${process.env.SERVER_URL}auth/magic?id=${id}&key=${magicToken}">Login Now</a></p>`,
+        html: `
+            <h1>Magic Login Link:</h1>
+            <p>Here is your magic login link: <a href="${process.env.SERVER_URL}auth/magic?id=${id}&key=${magicToken}">Login Now</a></p>
+        `,
     }
 }
 
@@ -29,6 +32,20 @@ const generateWelcomeEmailTemplate = (userEmail) => {
     }
 }
 
+const generateVerifyEmailTemplate = (userEmail) => {
+    return {
+        from: '"ihawp.com <wecwarren@gmail.com>',
+        to: userEmail,
+        subject: 'Verify Your Email - ihawp.com',
+        text: 'Verify your email to access all services.',
+        html: `
+            <h1>Verify Your Email:</h1>
+            <a href="${process.env.SERVER_URL}auth/verify-email">Verify Email</a>
+        `,
+    }
+}
+
 module.exports = {
     generateMagicTokenEmailTemplate,
+    generateVerifyEmailTemplate,
 }

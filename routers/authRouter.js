@@ -10,7 +10,7 @@ const deleteController = require('../controllers/deleteController');
 
 // Middleware
 const verifyJWT = require('../middleware/verifyJWT');
-const { rateLimit, smallRateLimiter } = require('../utils/rateLimit');
+const { rateLimit, smallRateLimiter } = require('../middleware/rateLimit');
 
 // Create Router
 const authRouter = express.Router();
@@ -65,6 +65,17 @@ authRouter.get('/logout',
 authRouter.get('/verify', 
     verifyJWT, 
     verifyController
+);
+
+/** 
+ * @route POST delete
+ * @description User can delete their own account.
+ * @middleware verifyJWT
+ * @controller deleteController
+ */
+authRouter.post('/delete', 
+    verifyJWT, 
+    deleteController
 );
 
 module.exports = authRouter;

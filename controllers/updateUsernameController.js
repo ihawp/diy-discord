@@ -35,7 +35,7 @@ const updateUsernameController = async (req, res) => {
         return res.status(500).json({ data: falseData, error: 'There was a problem when updating your username. Please try again.' })
     }
 
-    res.status(200).json({ data: { usernameUpdated: true }, error: null });
+    res.status(200).json({ data: { usernameUpdated: true, newUsername: trimUsername }, error: null });
 
 }
 

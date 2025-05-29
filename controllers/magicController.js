@@ -2,7 +2,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const validator = require('validator');
 
-const { selectAuthById, updateUserAuthById } = require('../utils/accountsQueries');
+const { selectAuthById, updateUserAuthById, updateUserEmailVerifiedById } = require('../utils/accountsQueries');
 const { jwtOptions1h, jwtOptions1w } = require('../utils/jwtOptions');
 const { cookieOptions1h, cookieOptions1w } = require('../utils/cookieOptions');
 
@@ -39,6 +39,12 @@ const magicController = async (req, res) => {
         await updateUserAuthById('', id);
     } catch (error) {
         return res.status(500).json({ data: null, error: 'Failure updating authentication token. Please try clicking the link again.' });
+    }
+
+    try {
+        await updateUserEmailVerifiedById(1, id);
+    } catch (error) {
+        return res.status(500).json({ data: null, error: 'Failure updating email verification level. Please try again later.' })
     }
 
     // Create JWT tokens

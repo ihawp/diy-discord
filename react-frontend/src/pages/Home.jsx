@@ -4,6 +4,7 @@ import { TeamsContext } from '../providers/TeamsProvider';
 
 import CreateTeamForm from '../components/CreateTeamForm';
 import UpdateUsernameForm from '../components/UpdateUsernameForm';
+import UpdateEmailForm from '../components/UpdateEmailForm';
 
 import io from 'socket.io-client';
 
@@ -47,6 +48,8 @@ export default function Home() {
         <CreateTeamForm />
 
         <UpdateUsernameForm />
+
+        <UpdateEmailForm />
 
     </main>
 }

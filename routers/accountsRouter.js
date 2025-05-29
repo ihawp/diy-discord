@@ -4,6 +4,7 @@ const express = require('express');
 const deleteController = require('../controllers/deleteController');
 const updateUsernameController = require('../controllers/updateUsernameController');
 const updatePasswordController = require('../controllers/updatePasswordController');
+const updateEmailController = require('../controllers/updateEmailController');
 
 // Middleware
 const verifyJWT = require('../middleware/verifyJWT');
@@ -44,12 +45,16 @@ accountsRouter.post('/update-password',
 );
 
 /**
- * ...
+ * Send an email to the new updated email to verify that email
  * 
- * @route
- * @description
- * @middleware
- * @controller
+ * @route POST update-email
+ * @description User can update their own email
+ * @middleware verifyJWT
+ * @controller updateEmailController
  */
+accountsRouter.post('/update-email',
+    verifyJWT,
+    updateEmailController
+);
 
 module.exports = accountsRouter;

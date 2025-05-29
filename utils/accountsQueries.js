@@ -39,6 +39,12 @@ const selectUserByUsername = async (username) => {
     return response;
 }
 
+/**
+ * Select a user profile ID by their username
+ * 
+ * @param {string} username - A potential user username
+ * @returns {Promise<Object|null>} User id OR null
+ */
 const selectUserIdByUsername = async (username) => {
     const [response] = await pool.execute('SELECT id FROM accounts WHERE username = ?', [username]);
     return response;
@@ -113,6 +119,11 @@ const updateUserPasswordById = async (newPasswordHash, id) => {
     return response;
 }
 
+const updateUserEmailVerifiedById = async (newEmailVerifiedLevel, id) => {
+    const [response] = await pool.execute('UPDATE accounts SET email_verified = ? WHERE id = ?', [newEmailVerifiedLevel, id]);
+    return response;
+}
+
 // ##########################################################
 // ##########################################################
 // ##########################################################
@@ -175,6 +186,7 @@ module.exports = {
     updateUserUsernameById,
     updateUserAuthById,
     updateUserPasswordById,
+    updateUserEmailVerifiedById,
 
     insertUser,
     insertUserAndAuth,
