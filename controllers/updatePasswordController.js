@@ -19,6 +19,7 @@ const updatePasswordController = async (req, res) => {
         return res.status(500).json({ data: { passwordUpdated: false }, error: 'There was a problem when trying to update your password. Please try again later.' });
     }
 
+    createLoggerInfo(infoTemplate(true, id, true, `Password was updated for user account ID: ${id} from ${req.ip}`));
     res.status(200).json({ data: { passwordUpdated: true }, error: null });
 
 }

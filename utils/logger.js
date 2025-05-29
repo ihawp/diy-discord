@@ -16,26 +16,38 @@ const logger = winston.createLogger({
   ],
 });
 
-// Create some functions for logging
+// Do Logging
 
 /**
  * Create an INFO level log with `winston`
  * 
- * @param {Object} filledTemplate - An info template of what 
+ * @param {Object} filledTemplate - A filled info template of what will be logged (at scale it would be expected that certain templates are used for X and Y because scripts that print that data might break or be annoyed with things that shouldnt exist or that are missing..?)
  */
 const createLoggerInfo = (filledTemplate) => {
     logger.info(filledTemplate);
 }
 
+// Logging Templates
 
 /**
  * Create an INFO level template
  * 
  * @param {Boolean} success - Can be undefined to represent something not having happened yet
- * @param {Number} id - User ID
+ * @param {Number || undefined} id - User ID, can be undefined in cases where user is not logged in and therefore has no Id
  * @param {Boolean} verified - Has the users JWT token been verified at this point in the route
  * @param {String} action - Description of the action taken by the user
  * @returns {Object}
+ * 
+ * @example
+ * // Pass the created info template directly into the winston log creator
+ * createLoggerInfo(
+ *    infoTemplate(
+ *        true, 
+ *        req.user.id, 
+ *        true, 
+ *        `User is attempting to update the password of account ID: 123 from IP: ${req.ip}`
+ *    )
+ * );
  */
 const infoTemplate = (success, id, verified, action) => {
   return {
@@ -51,4 +63,5 @@ const infoTemplate = (success, id, verified, action) => {
 
 module.exports = logger, {
   createLoggerInfo,
+  infoTemplate,
 };
